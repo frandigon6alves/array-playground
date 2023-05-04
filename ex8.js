@@ -15,3 +15,17 @@ console.log(cortaPorAqui("Elefante", "Leopardo", animales)); // ["Elefante", "Ti
 console.log(cortaPorAqui("Tigre", "Ñu", animales)); // ["Tigre", "Leopardo", "Ñu"]
 console.log(cortaPorAqui("Tigre", "Tigre", animales)); // ["Tigre"]
 
+function cortaPorAqui(corteIzq, corteDer, array) {
+    const idxIzq = array.findIndex((element) => element === corteIzq);
+    const idxDer = array.findIndex((element) => element === corteDer);
+    
+    if (idxIzq === -1 || idxDer === -1) {
+      return [];
+    }
+  
+    const start = Math.min(idxIzq, idxDer);
+    const end = Math.max(idxIzq, idxDer);
+  
+    return array.slice(start, end + 1);
+  }
+  

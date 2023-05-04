@@ -4,6 +4,10 @@
 
 let colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
 
-let resultado = colors.map()
+let resultado = colors.map((element, index) => {
+    return `${index}-${element}`;
+});
 
 console.log(resultado); // ['0-Blue', '1-Green', '2-Red', '3-Orange', '4-Violet', '5-Indigo', '6-Yellow']
+
+//el método map() recorre el array colors y devolver un nuevo array resultado que contiene una cadena de texto para cada uno de los elementos del array original.
